@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.28.9",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  },
+  "name": "git-for-awscdk",
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.1"
+  }
+}

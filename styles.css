@@ -1,0 +1,9 @@
+li {
+    font-size: 1.5rem !important;
+}
+li li {
+    font-size: 1.3rem !important;
+}
+.text-dot {
+    font-family: 'DotGothic16', sans-serif !important;
+}
