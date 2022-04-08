@@ -48,7 +48,9 @@ The last comment block of each slide will be treated as slide notes. It will be 
     </ul>
   </div>
   <div>
-    <img src="/prev-title-slide.png" class="rounded-lg" />
+    <a href="https://winteryukky.github.io/slides-acceralation-frontend-monitoring-by-awscdk" target="_brank">
+      <img src="/prev-title-slide.png" class="rounded-lg" />
+    </a>
   </div>
 </div>
 
@@ -57,8 +59,8 @@ layout: center
 class: text-center 
 ---
 
-前回は少し上級者向けな内容だったので
-<h1>今回は<span class="text-4xl px-2 text-amber-500">ライトな層</span>に向けた資料に</h1>
+前回は少し踏み込んだ内容だったので
+<h1>今回は<span class="text-4xl px-2 text-amber-500">ライトな</span>資料に</h1>
 <div class="opacity-60">当たり前な内容が多いですが、ご了承ください</div>
 
 <!-- 
@@ -123,8 +125,8 @@ layout: intro
 <div class="grid grid-cols-5 items-center h-4/5 ">
   <div class="col-span-3 bg-gray-800 z-1 rounded p-6">
     <ul class="opacity-90">
-      <li><strong class="text-red-400">AWS</strong>利用経験なし</li>
-      <li><strong class="text-blue-400">TypeScript</strong> チョットデキル</li>
+      <li><strong class="text-rose-400">AWS</strong>利用経験なし</li>
+      <li><strong class="text-sky-400">TypeScript</strong> チョットデキル</li>
       <li><strong class="text-yellow-400">GKE</strong> チョットデキル</li>
     </ul>
   </div>
@@ -761,7 +763,7 @@ new lambda.Function(this, 'Function', {
 layout: center
 ---
 
-# 🦸初学者がやりがちなミスから守ってくれる🦸
+# 型が初歩的なミスから守ってくれる🥰
 
 ---
 layout: center
@@ -795,7 +797,7 @@ layout: center
 class: text-center
 ---
 
-# これらが開発体験が良いと言われる理由
+# これらが開発体験が良いと言われる理由の一部
 故に始めやすかった
 
 ---
@@ -817,7 +819,7 @@ title: これまでの運用における成功と失敗
 layout: section
 ---
 
-# 成功したこと
+# <strong class="text-rose-400">成功</strong><span class="opacity-70 text-4xl">したこと</span>
 
 ---
 layout: center
@@ -827,15 +829,26 @@ class: text-center
 # プロジェクトに関わるリソースを<br >可能な限りCDKで管理したこと
 
 ---
+layout: center
+class: text-center
+---
 
-# 別プロジェクトの話
+<div>
+  <div><strong class="text-green-400 text-4xl">Excel手順書</strong><span class="text-3xl opacity-90">プロジェクトと</span></div>
+  <div><strong class="text-yellow-400 text-4xl">CDKを用いた</strong><span class="text-3xl opacity-90">プロジェクトで</span></div>
+  <div class="text-3xl opacity-90">リリースコストを比較</div>
+</div>
+
+---
+
+# <strong class="text-green-400">Excel手順書</strong>プロジェクト
 
 <div class="grid grid-cols-2 items-center h-4/6 opacity-90">
   <div>
     <h3 class="pb-3">レビュー</h3>
     <ul>
       <v-list-item icon="📄">レビュー対象は手順書Excel</v-list-item>
-      <v-list-item icon="🤔">正しさの判断基準は？</v-list-item>
+      <v-list-item icon="🤔">レビュアーに判断基準を一任</v-list-item>
       <v-list-item icon="😥">レビューコスト高</v-list-item>
     </ul>
   </div>
@@ -844,14 +857,15 @@ class: text-center
     <ul>
       <v-list-item icon="✋">手作業によるリリース</v-list-item>
       <v-list-item icon="🙄">作業者が作業を誤る可能性</v-list-item>
-      <v-list-item icon="👻">履歴に残らない情報を生む可能性</v-list-item>
+      <v-list-item icon="👻">履歴に残らない操作を生む可能性</v-list-item>
     </ul>
   </div>
 </div>
+<h2 v-click class="text-2xl"><mdi-arrow-right />リリース作業におけるメンバーの負荷が高かった</h2>
 
 ---
 
-# CDKを利用していることで
+# CDKを導入したプロジェクト
 
 <div class="grid grid-cols-2 items-center h-4/6 opacity-90">
   <div>
@@ -967,27 +981,10 @@ layout: center
 </div>
 
 ---
-layout: center
----
-
-# CDKソースをメンバー全員で<br >メンテナンスするようにしたこと
-
----
-
-<h1>DevOpsの文化が自然と浸透したこと</h1>
-<div class="grid items-center h-4/5 opacity-90">
-  <ul>
-    <li>CDKを担当領域に含めることで自然と全員が運用を考えるように</li>
-    <li>CloudWatchメトリクスの利用も簡単</li>
-    <li>「CloudFormationでよくない？」の回答はここら辺が答えだと思っています</li>
-  </ul>
-</div>
-
----
 layout: section
 ---
 
-# 失敗したこと
+# <strong class="text-sky-400">失敗</strong><span class="opacity-70 text-4xl">したこと</span>
 
 ---
 layout: center
@@ -1173,13 +1170,29 @@ new ExampleStack(app, `${env}-ExampleStack`, {
       <li class="mt-4">
         環境毎の差は環境変数で注入
         <ul>
-          <li>環境名をスタック名に利用して重複回避</li>
-          <li>スタック内で直接参照せずPropsを用いる</li>
+          <li>
+            環境値をスタック名に利用して重複回避
+            <ul>
+              <v-list-item icon="※" class="text-sm">シングルアカウントの場合</v-list-item>
+            </ul>
+          </li>
+          <li>
+            スタック内で直接参照せず<span class="text-yellow-400">Props</span>を用いる
+            <ul>
+              <v-list-item icon="※" class="text-sm">ここが重要</v-list-item>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
   </div>
 </div>
+
+<style>
+li li li {
+    font-size: 1rem !important;
+}
+</style>
 
 ---
 
@@ -1229,10 +1242,10 @@ layout: center
 <div class="grid grid-cols-2 items-center h-4/5">
   <div>
     <ul class="opacity-90">
-      <li>CodePipelineの高度なコンストラクト</li>
-      <li>CDKアプリをデプロイすることに特化</li>
-      <li>自身を動かすパイプラインを定義</li>
-      <li>マルチアカウントも楽々</li>
+      <li v-click>CodePipelineの高度なコンストラクト</li>
+      <li v-click>CDKアプリをデプロイすることに特化</li>
+      <li v-click>自身を動かすパイプラインを定義</li>
+      <li v-click>マルチアカウントも楽々</li>
     </ul>
   </div>
   <div>
@@ -1265,20 +1278,33 @@ layout: section
 
 ---
 
+# ここまで実現できたこと
+
 <div class="grid grid-cols-2 h-4/5 items-center">
-  <ul>
-    <v-list-item icon="✅">初心者でも素早くIaCを導入</v-list-item>
-    <v-list-item icon="✅">AWSの世界に楽しく入っていけた</v-list-item>
-    <v-list-item icon="✅">3年目になっても苦にならない運用</v-list-item>
-    <v-list-item icon="✅">新しいAWSサービス導入がスムーズ</v-list-item>
+  <ul class="opacity-90">
+    <v-list-item v-click icon="✅">初心者でも素早くIaCを導入</v-list-item>
+    <v-list-item v-click icon="✅">AWSの世界に楽しく入門</v-list-item>
+    <v-list-item v-click icon="✅">3年目になっても苦にならない運用</v-list-item>
+    <v-list-item v-click icon="✅">新しいAWSサービスのスムーズな導入</v-list-item>
   </ul>
   <div>
-    <h1>これら全てCDKのおかげ</h1>
+    <div v-click class="text-center">
+      <span class="opacity-90 text-3xl">これら全て</span><strong class="text-yellow-400 text-5xl">CDK</strong><span class="opacity-90 text-3xl">のおかげ</span>
+    </div>
   </div>
 </div>
-<div v-click class="text-3xl mt-12">
-  これからはコントリビューターとして恩返ししていきます😌
-</div>
+
+---
+layout: center
+class: text-center
+---
+
+<h1>
+  <strong class="text-rose-400 text-5xl">AWS</strong>
+  <span class="opacity-80">も</span><strong class="text-sky-400 text-5xl">IaC</strong>
+  <span class="opacity-80">も始めたい</span><ruby>🐣<rp>(</rp><rt>初心者</rt><rp>)</rp></ruby><span class="opacity-80">さん</span><br>
+  <strong class="text-yellow-400 text-5xl">CDK</strong><span class="opacity-80">からスタートしてみてはいかがでしょうか</span>😌
+</h1>
 
 ---
 layout: center
