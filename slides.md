@@ -466,6 +466,12 @@ k8sの時も似たことを思いました
 </div>
 <div v-click class="text-3xl mt-6"><mdi-arrow-right />これらを解決しないと、早い段階から結果を出すことは難しいと判断🤔</div>
 
+<!-- 
+自身の能力不足は学んでプロト開発までに間に合わせればいいですが、
+他メンバーの学習意欲が低いという問題があり、それが対応できなければ運用時に問題になると考え
+これらを解決することが必要だと判断しました
+-->
+
 ---
 layout: center
 ---
@@ -475,6 +481,10 @@ layout: center
   <strong class="px-1">CDK</strong>
   <span class="text-3xl opacity-60">を知り、採用することに</span>
 </h1>
+
+<!-- 
+CDKが先の課題を解決するのではと期待を込めて採用することにしました。
+ -->
 
 ---
 layout: center
@@ -1328,7 +1338,7 @@ class: text-center
 <h1>
   <strong class="text-rose-400 text-5xl">AWS</strong>
   <span class="opacity-80">も</span><strong class="text-sky-400 text-5xl">IaC</strong>
-  <span class="opacity-80">も始めたい</span><ruby>🐣<rp>(</rp><rt>初心者</rt><rp>)</rp></ruby><span class="opacity-80">さん</span><br>
+  <span class="opacity-80">も始めたい</span>方<br>
   <strong class="text-yellow-400 text-5xl">CDK</strong><span class="opacity-80">からスタートしてみてはいかがでしょうか</span>😌
 </h1>
 
